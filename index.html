@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Effective Browser JavaScript Debugging</title>
+
+		<meta name="description" content="Effective Browser JavaScript Debugging">
+		<meta name="author" content="Vance Lucas">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blood.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<style type="text/css">
+      .flex {
+        display: flex;
+      }
+      .flex-item {
+        display: flex;
+      }
+      .flex-1 {
+        flex-grow: 1;
+      }
+    </style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+<section data-markdown>
+## Effective Browser JavaScript Debugging
+
+Using the same browser you **already have**
+
+Vance Lucas
+</section>
+
+<section>
+  <h2>Vance Lucas</h2>
+  <div class="flex">
+    <div class="flex-1">
+      <h4>Personal</h4>
+      <ul>
+        <li>Web: <a href="http://vancelucas.com">vancelucas.com</a></li>
+        <li>Twitter: <a href="https://twitter.com/vlucas">@vlucas</a></li>
+        <li>Christian</li>
+        <li>Oklahoma City, OK</li>
+      </ul>
+      <br />
+      <br />
+
+      <h4>Professional</h4>
+      <ul>
+        <li>Work: <del><a href="http://www.netsuite.com">NetSuite</a></del> <a href="http://www.oracle.com">Oracle</a></li>
+        <li>User Group: <a href="http://okcjs.com">OKC.js</a></li>
+        <li>Conference: <a href="http://thunderplainsconf.com">ThunderPlains</a></li>
+        <li>Community: <a href="http://techlahoma.org">Techlahoma</a></li>
+      </ul>
+    </div>
+    <img alt="Family" class="flex-item" height="540" src="img/family.jpg" />
+  </div>
+</section>
+
+<section data-markdown>
+## Your Browser is JavaScript IDE
+
+* Browser is primary JS runtime for everyone
+
+* Extensive debugging and performance profiling tools already built-in (no plugins or downloads required)
+
+* Benefit from hundreds of millions of $$$ worth of work browser vendors put in competing with each other
+</section>
+
+<section data-markdown>
+## All Modern Browsers
+
+* Google Chrome*
+
+* Mozilla Firefox (and Firefox Developer Edition)
+
+* Apple Safari
+
+* Microsoft Edge
+
+_* All examples/screenshots are from Chrome_
+</section>
+
+<section data-markdown>
+## Available Tools
+
+* Element inspection &amp; editing
+
+* Interactive console
+
+* Debugging with breakpoints
+  * DOM
+  * XHR
+  * Events
+
+* Network
+
+* Timeline
+
+* Profiles
+
+</section>
+
+<section data-markdown>
+## Element Inspection
+</section>
+
+<section>
+  <img src="img/element-inspection.png" />
+</section>
+
+<section>
+  <img src="img/breakpoints-dom.png" />
+</section>
+
+<section data-markdown>
+## Console
+</section>
+
+<section>
+  <img src="img/console.png" />
+</section>
+
+<section data-markdown>
+## Debugging
+</section>
+
+<section>
+  <img src="img/breakpoints.png" />
+</section>
+
+<section data-markdown>
+## Network
+</section>
+
+<section>
+  <img src="img/network.png" />
+</section>
+
+<section data-markdown>
+## Timeline
+</section>
+
+<section>
+  <img src="img/timeline.png" />
+</section>
+
+<section data-markdown>
+## Profiles
+</section>
+
+<section>
+  <img src="img/profile-memory1.png" />
+</section>
+
+<section>
+  <img src="img/profile-memory2.png" />
+</section>
+
+
+
+
+<section data-markdown>
+# Examples
+</section>
+
+<section data-markdown>
+## Blocking
+</section>
+
+<section>
+  <img src="img/blocking.png" />
+</section>
+
+<section data-markdown>
+## Non-Blocking
+</section>
+
+<section>
+  <img src="img/blocking-non.png" />
+</section>
+
+<section data-markdown>
+## Memory Problems
+</section>
+
+<section data-markdown>
+## Symptoms
+
+* Performance progressively worse over time (memory leak)
+
+* Significant or frequent performance delays and pauses (garbage collection)
+
+* Performance consistently bad (memory bloat)
+</section>
+
+
+<section data-markdown>
+# DEMOS
+</section>
+
+<section data-markdown>
+## Questions?
+</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
